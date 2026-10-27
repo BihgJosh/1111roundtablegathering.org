@@ -2024,8 +2024,8 @@
                   Continue on WhatsApp ↗
                 </button>
                 <p class="form-note">
-                  Your inquiry details are recorded to support follow-up. After
-                  submission, WhatsApp opens with your message ready to send.
+                  WhatsApp opens with your inquiry ready to send. Your details
+                  are shared with MDGIFT when you send the message in WhatsApp.
                 </p>
               </div>
             </div>
@@ -2620,12 +2620,12 @@
             return;
           }
           const body =
-            'Hello MDGIFT, I would like to register or inquire about the 11:11 Roundtable.\\n\\nName: ' +
+            'Hello MDGIFT, I would like to register or inquire about the 11:11 Roundtable.\n\nName: ' +
             name +
-            '\\nMinistry/Organization: ' + ministry +
-            '\\nPhone: ' + phone +
-            '\\nEmail: ' + email +
-            '\\nMessage: ' + message;
+            '\nMinistry/Organization: ' + ministry +
+            '\nPhone: ' + phone +
+            '\nEmail: ' + email +
+            '\nMessage: ' + message;
           const whatsappUrl = wa + '?text=' + encodeURIComponent(body);
           const whatsappWindow = window.open('about:blank', '_blank');
           submitButton.disabled = true;
