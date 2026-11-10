@@ -1379,17 +1379,17 @@
               <div class="flyer-stage" id="flyerStage" tabindex="0" role="region" aria-roledescription="carousel" aria-label="11:11 Roundtable flyers">
                 <div class="flyer-backdrop" id="flyerBackdrop" aria-hidden="true"></div>
                 <button class="flyer-open" id="flyerOpen" type="button" aria-label="Open current flyer in full-screen view">
-                  <img id="flyerImage" src="./resources/WhatsApp-Image-2026-09-27-at-3.22.29-AM.jpeg" alt="11:11 A Call to Order event flyer" fetchpriority="high" />
+                  <img id="flyerImage" src="./resources/flyers/1.png" alt="11:11 Roundtable flyer 1" fetchpriority="high" />
                   <span class="flyer-placeholder" id="flyerPlaceholder" hidden><strong id="flyerPlaceholderTitle">Flyer</strong><span id="flyerPlaceholderMessage">This flyer will appear after it is uploaded.</span></span>
                 </button>
               </div>
               <div class="flyer-controls">
                 <button class="flyer-arrow" type="button" id="flyerPrev" aria-label="Previous flyer">‹</button>
-                <span class="flyer-counter" id="flyerCounter" aria-live="polite">1 / 6</span>
+                <span class="flyer-counter" id="flyerCounter" aria-live="polite">1 / 14</span>
                 <button class="flyer-arrow" type="button" id="flyerNext" aria-label="Next flyer">›</button>
               </div>
               <div class="flyer-dots" id="flyerDots" aria-label="Choose a flyer"></div>
-              <p class="flyer-note" id="flyerStatus" role="status">Flyer 1 of 6</p>
+              <p class="flyer-note" id="flyerStatus" role="status">Flyer 1 of 14</p>
             </article>
             <article class="showcase-panel reveal" aria-labelledby="video-heading">
               <div class="showcase-kicker">Watch and listen</div>
@@ -2132,7 +2132,7 @@
 
     <dialog class="flyer-lightbox" id="flyerLightbox" aria-label="Flyer viewer">
       <div class="flyer-lightbox-top">
-        <span id="flyerLightboxCounter" aria-live="polite">Flyer 1 of 6</span>
+        <span id="flyerLightboxCounter" aria-live="polite">Flyer 1 of 14</span>
         <button type="button" id="flyerLightboxClose" aria-label="Close flyer viewer">Close ×</button>
       </div>
       <div class="flyer-lightbox-image-wrap">
@@ -2148,14 +2148,14 @@
     <script type="module">
       (async function () {
         const wa = 'https://wa.me/2348086001110';
-        const flyerSlides = [
-          { src: './resources/WhatsApp-Image-2026-09-27-at-3.22.29-AM.jpeg', alt: '11:11 A Call to Order event flyer', title: 'Event flyer' },
-          { src: './resources/2.png', alt: '11:11 Roundtable flyer featuring the visionary founder', title: 'Flyer 2 · Visionary Founder' },
-          { src: './resources/3.png', alt: '11:11 Roundtable flyer featuring the keynote speaker', title: 'Flyer 3 · Keynote Speaker' },
-          { src: './resources/4.png', alt: '11:11 Roundtable flyer featuring the royal father of the day', title: 'Flyer 4 · Royal Father of the Day' },
-          { src: './resources/5.png', alt: '11:11 Roundtable flyer featuring the founder and keynote speaker', title: 'Flyer 5 · Speakers' },
-          { src: './resources/6.png', alt: '11:11 Roundtable flyer featuring the worship ministers', title: 'Flyer 6 · Worship Ministers' }
-        ];
+        const flyerSlides = Array.from({ length: 14 }, (_, index) => {
+          const number = index + 1;
+          return {
+            src: './resources/flyers/' + number + '.png',
+            alt: '11:11 Roundtable flyer ' + number,
+            title: 'Flyer ' + number
+          };
+        });
         const flyerStage = document.getElementById('flyerStage');
         const flyerImage = document.getElementById('flyerImage');
         const flyerPlaceholder = document.getElementById('flyerPlaceholder');
