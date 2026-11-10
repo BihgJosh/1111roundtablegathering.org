@@ -1385,11 +1385,11 @@
               </div>
               <div class="flyer-controls">
                 <button class="flyer-arrow" type="button" id="flyerPrev" aria-label="Previous flyer">‹</button>
-                <span class="flyer-counter" id="flyerCounter" aria-live="polite">1 / 14</span>
+                <span class="flyer-counter" id="flyerCounter" aria-live="polite">1 / 13</span>
                 <button class="flyer-arrow" type="button" id="flyerNext" aria-label="Next flyer">›</button>
               </div>
               <div class="flyer-dots" id="flyerDots" aria-label="Choose a flyer"></div>
-              <p class="flyer-note" id="flyerStatus" role="status">Flyer 1 of 14</p>
+              <p class="flyer-note" id="flyerStatus" role="status">Flyer 1 of 13</p>
             </article>
             <article class="showcase-panel reveal" aria-labelledby="video-heading">
               <div class="showcase-kicker">Watch and listen</div>
@@ -2132,7 +2132,7 @@
 
     <dialog class="flyer-lightbox" id="flyerLightbox" aria-label="Flyer viewer">
       <div class="flyer-lightbox-top">
-        <span id="flyerLightboxCounter" aria-live="polite">Flyer 1 of 14</span>
+        <span id="flyerLightboxCounter" aria-live="polite">Flyer 1 of 13</span>
         <button type="button" id="flyerLightboxClose" aria-label="Close flyer viewer">Close ×</button>
       </div>
       <div class="flyer-lightbox-image-wrap">
@@ -2148,10 +2148,10 @@
     <script type="module">
       (async function () {
         const wa = 'https://wa.me/2348086001110';
-        const flyerSlides = Array.from({ length: 14 }, (_, index) => {
+        const flyerSlides = [1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14].map((fileNumber, index) => {
           const number = index + 1;
           return {
-            src: './resources/flyers/' + number + '.png',
+            src: './resources/flyers/' + fileNumber + '.png',
             alt: '11:11 Roundtable flyer ' + number,
             title: 'Flyer ' + number
           };
